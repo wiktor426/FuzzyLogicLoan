@@ -13,8 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    clientquestionnaire.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    clientquestionnaire.h
 
 FORMS    += mainwindow.ui
+
+DISTFILES += \
+    LICENSE \
+    README.md
