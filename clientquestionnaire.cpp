@@ -19,7 +19,7 @@ void ClientQuestionnaire::setupIncomeJob()
 {
 	vBoxIncomeJob = new QVBoxLayout();
 	hBoxIncome = new QHBoxLayout();
-	hBoxAgreement = new QHBoxLayout();
+//	hBoxAgreement = new QHBoxLayout();
 
 
 //	vBoxIncomeJob->addWidget(); TODO dodać linie przed i po tytule
@@ -35,16 +35,16 @@ void ClientQuestionnaire::setupIncomeJob()
 	dSpinBoxAverageIncome->setValue(0.0);
 	hBoxIncome->addWidget(dSpinBoxAverageIncome);
 
-	labelAgreementType = new QLabel("Główne źródło dochodów: ");
-	hBoxAgreement->addWidget(labelAgreementType);
-	cBoxAgreementType = new QComboBox;
-	cBoxAgreementType->addItem("Umowa o pracę");
-	cBoxAgreementType->addItem("Umowa cywilnoprawna");
-	cBoxAgreementType->addItem("Własna działalność");
-	hBoxAgreement->addWidget(cBoxAgreementType);
+//	labelAgreementType = new QLabel("Główne źródło dochodów: ");
+//	hBoxAgreement->addWidget(labelAgreementType);
+//	cBoxAgreementType = new QComboBox;
+//	cBoxAgreementType->addItem("Umowa o pracę");
+//	cBoxAgreementType->addItem("Umowa cywilnoprawna");
+//	cBoxAgreementType->addItem("Własna działalność");
+//	hBoxAgreement->addWidget(cBoxAgreementType);
 
 	vBoxIncomeJob->addLayout(hBoxIncome);
-	vBoxIncomeJob->addLayout(hBoxAgreement);
+//	vBoxIncomeJob->addLayout(hBoxAgreement);
 	generalLayout->addLayout(vBoxIncomeJob);
 }
 
@@ -76,11 +76,14 @@ void ClientQuestionnaire::setupObligations()
 
 	labelLoansHistory = new QLabel("Historia kredytowa: ");
 	hBoxLoansHistory->addWidget(labelLoansHistory);
-	cBoxLoansHistory = new QComboBox();
-	cBoxLoansHistory->addItem("Brak problemów ze spłatą zobowiązań");
-	cBoxLoansHistory->addItem("<=5 wpisów");
-	cBoxLoansHistory->addItem("5> wpisów");
-	hBoxLoansHistory->addWidget(cBoxLoansHistory);
+	spinBoxLoansWithProblems = new QSpinBox();
+	spinBoxLoansWithProblems->setMinimum(0);
+	spinBoxLoansWithProblems->setValue(0);
+//	cBoxLoansHistory = new QComboBox();
+//	cBoxLoansHistory->addItem("Brak problemów ze spłatą zobowiązań");
+//	cBoxLoansHistory->addItem("<=5 wpisów");
+//	cBoxLoansHistory->addItem("5> wpisów");
+//	hBoxLoansHistory->addWidget(cBoxLoansHistory);
 
 	labelSumOfCurrentLoanCharges = new QLabel("Bieżące zobowiązania kredytowe: ");
 	hBoxSumOfCurrentLoanCharges->addWidget(labelSumOfCurrentLoanCharges);
@@ -101,7 +104,7 @@ void ClientQuestionnaire::setupPartnership()
 {
 	vBoxPartnership = new QVBoxLayout();
 	hBoxAveragePartnershipIncome = new QHBoxLayout();
-	hBoxSeparateProperty = new QHBoxLayout();
+//	hBoxSeparateProperty = new QHBoxLayout();
 	QLabel *title = new QLabel("Związek: ");
 	title->setAlignment(Qt::AlignCenter);
 	title->setStyleSheet("font-weight: bold;");
@@ -114,13 +117,13 @@ void ClientQuestionnaire::setupPartnership()
 	dSpinBoxAveragePartnerShipIncome->setValue(0);
 	hBoxAveragePartnershipIncome->addWidget(dSpinBoxAveragePartnerShipIncome);
 
-	labelSeparateProperty = new QLabel("Rozdzielność majątkowa: ");
-	cBoxSeparateProperty = new QComboBox();
-	cBoxSeparateProperty->addItem("Tak");
-	cBoxSeparateProperty->addItem("Nie");
+//	labelSeparateProperty = new QLabel("Rozdzielność majątkowa: ");
+//	cBoxSeparateProperty = new QComboBox();
+//	cBoxSeparateProperty->addItem("Tak");
+//	cBoxSeparateProperty->addItem("Nie");
 
 	vBoxPartnership->addLayout(hBoxAveragePartnershipIncome);
-	vBoxPartnership->addLayout(hBoxSeparateProperty);
+//	vBoxPartnership->addLayout(hBoxSeparateProperty);
 
 	generalLayout->addLayout(vBoxPartnership);
 }

@@ -26,9 +26,9 @@ public:
 	QLabel *labelAverageIncome;
 	QDoubleSpinBox *dSpinBoxAverageIncome;
 
-	QHBoxLayout *hBoxAgreement;
-	QLabel *labelAgreementType;
-	QComboBox *cBoxAgreementType;
+//	QHBoxLayout *hBoxAgreement;
+//	QLabel *labelAgreementType;
+//	QComboBox *cBoxAgreementType;
 
 
     //obligations
@@ -45,7 +45,8 @@ public:
 
 	QHBoxLayout *hBoxLoansHistory;
 	QLabel *labelLoansHistory;
-	QComboBox *cBoxLoansHistory;
+//	QComboBox *cBoxLoansHistory;
+	QSpinBox *spinBoxLoansWithProblems;
 
 	QHBoxLayout *hBoxSumOfCurrentLoanCharges;
 	QLabel *labelSumOfCurrentLoanCharges;
@@ -59,9 +60,9 @@ public:
 	QLabel *labelAveragePartnershipIncome;
 	QDoubleSpinBox *dSpinBoxAveragePartnerShipIncome;
 
-	QHBoxLayout *hBoxSeparateProperty;
-	QLabel *labelSeparateProperty;
-	QComboBox *cBoxSeparateProperty;
+//	QHBoxLayout *hBoxSeparateProperty;
+//	QLabel *labelSeparateProperty;
+//	QComboBox *cBoxSeparateProperty;
 
 
 
