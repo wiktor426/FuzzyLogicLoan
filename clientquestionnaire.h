@@ -68,15 +68,15 @@ public:
 
     //personal:
 	void setupPersonal();
-	QVBoxLayout vBoxPersonal;
+	QVBoxLayout *vBoxPersonal;
 
-	QHBoxLayout hBoxAge;
-	QSpinBox spinBoxAge;
-	QLabel labelAge;
+	QHBoxLayout *hBoxAge;
+	QSpinBox *spinBoxAge;
+	QLabel *labelAge;
 
-	QHBoxLayout hBoxHealth;
-    QLabel labelHealth;
-	QComboBox cBoxHealth;
+//	QHBoxLayout hBoxHealth;
+//    QLabel labelHealth;
+//	QComboBox cBoxHealth;
 
 
 

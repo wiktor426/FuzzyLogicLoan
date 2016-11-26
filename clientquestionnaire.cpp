@@ -9,6 +9,7 @@ ClientQuestionnaire::ClientQuestionnaire(QWidget *parent) : QWidget(parent)
 void ClientQuestionnaire::setupQuestionnaire()
 {
 	generalLayout = new QVBoxLayout();
+	setupPersonal();
 	setupIncomeJob();
 	setupObligations();
 	setupPartnership();
@@ -126,4 +127,26 @@ void ClientQuestionnaire::setupPartnership()
 //	vBoxPartnership->addLayout(hBoxSeparateProperty);
 
 	generalLayout->addLayout(vBoxPartnership);
+}
+
+void ClientQuestionnaire::setupPersonal()
+{
+	vBoxPersonal = new QVBoxLayout();
+	hBoxAge = new QHBoxLayout();
+	QLabel *title = new QLabel("Personalne: ");
+	title->setAlignment(Qt::AlignCenter);
+	title->setStyleSheet("font-weight: bold;");
+	vBoxPersonal->addWidget(title);
+
+	labelAge = new QLabel("Wiek: ");
+	hBoxAge->addWidget(labelAge);
+	spinBoxAge = new QSpinBox();
+	spinBoxAge->setMinimum(0);
+	spinBoxAge->setMaximum(150);
+	spinBoxAge->setValue(0);
+	hBoxAge->addWidget(spinBoxAge);
+
+	vBoxPersonal->addLayout(hBoxAge);
+	generalLayout->addLayout(vBoxPersonal);
+
 }

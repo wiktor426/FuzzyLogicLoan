@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
 	clientQuestionnaire->setupQuestionnaire();
 	testData = new InputDataRules(this);
 	testChart = new InputDataRulesChart();
+	fuzzyficator = new Fuzzyficator();
 }
 
 MainWindow::~MainWindow()
@@ -69,5 +70,20 @@ void MainWindow::on_pushButtonShowFuzzyficationRules_released()
 	testChart->setName("Test");
 	testChart->setData(testData);
 	testChart->drawChart();
+	qDebug()<<"4";
 	testChart->show();
+	QMap<QString,double> testMapFuzzy;
+	qDebug()<<"5";
+	testMapFuzzy = fuzzyficator->fuzzyfy(testData,6);
+	qDebug()<<"6";
+	if(testMapFuzzy.size()<1)
+		return;
+	qDebug()<<"7";
+	QMap<QString, double >::const_iterator i = testMapFuzzy.begin();
+	while(i != testMapFuzzy.constEnd()){
+		qDebug()<<"Rule: "<<i.key()<<" membership: "<<i.value();
+		++i;
+	}
+
+
 }

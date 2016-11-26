@@ -22,6 +22,16 @@ void InputDataRulesChart::setData(InputDataRules *value)
 
 void InputDataRulesChart::drawChart()
 {
+//	delete chartView;
+//	delete chart;
+//	chart = new QChart;
+//	chartView = new QChartView(chart);
+//	chartView->setRenderHint(QPainter::Antialiasing);
+//	generalLayout->addWidget(chartView);
+
+	if(data->fuzzyficationRules.size()<1)
+		return;
+
 	chart->setTitle(name);
 	QMap<QString, QList<QPoint> >::const_iterator i = data->fuzzyficationRules.begin();
 	while (i != data->fuzzyficationRules.constEnd()) {

@@ -15,12 +15,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     clientquestionnaire.cpp \
     inputdataruleschart.cpp \
-    inputdatarules.cpp
+    inputdatarules.cpp \
+    clientquestionairefuzzyfication.cpp \
+    fuzzyficator.cpp
 
 HEADERS  += mainwindow.h \
     clientquestionnaire.h \
     inputdataruleschart.h \
-    inputdatarules.h
+    inputdatarules.h \
+    clientquestionairefuzzyfication.h \
+    fuzzyficator.h
 
 FORMS    += mainwindow.ui
 

@@ -5,6 +5,7 @@
 #include "clientquestionnaire.h"
 #include "inputdatarules.h"
 #include "inputdataruleschart.h"
+#include "fuzzyficator.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,6 +21,7 @@ public:
 	ClientQuestionnaire *clientQuestionnaire;
 	InputDataRules *testData;
 	InputDataRulesChart *testChart;
+	Fuzzyficator *fuzzyficator;
 
 private slots:
 	void on_pushButtonQuestionnaire_released();
